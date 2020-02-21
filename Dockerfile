@@ -6,7 +6,7 @@ RUN dotnet publish -c Release -o /app
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS final
 ENV ASPNETCORE_URLS=http://*:8080
-ENV message=Hello
+ENV message=Hello-FromPDSE
 WORKDIR /app
 COPY --from=build /app .
 USER 1001
